@@ -163,8 +163,15 @@ static void set_smsg(const char *m) {
 static char todo_path[600];
 static void build_paths(void) {
     const char *h=getenv("HOME"); if(!h) h=".";
+
+    /* $XDG_DATA_HOME/meowdo  (defaults to ~/.local/share/meowdo) */
     char base[512];
-    snprintf(base,sizeof base,"%s/.meowdo",h);
+    const char *xdg=getenv("XDG_DATA_HOME");
+    if (xdg && xdg[0])
+        snprintf(base,sizeof base,"%s/meowdo",xdg);
+    else
+        snprintf(base,sizeof base,"%s/.local/share/meowdo",h);
+
     if (mkdir(base,0755)!=0 && errno!=EEXIST)
         { snprintf(todo_path,sizeof todo_path,"todos.txt"); return; }
     snprintf(todo_path,sizeof todo_path,"%s/todos.txt",base);
