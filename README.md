@@ -185,4 +185,3 @@ Pull requests are welcome! Please ensure:
 ---
 
 Made with 💖 and 😺
-```
