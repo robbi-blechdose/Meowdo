@@ -76,17 +76,17 @@ static const char *BONGO_UTF8[BC_H] = {
 };
 
 /* ── bongo art: ASCII fallback ── */
+/* ── bongo art: ASCII fallback ── */
 static const char *BONGO_ASCII[BC_H] = {
-    "      /\\_/\\         ",
-    "     ( o.o )        ",
-    "      > ^ <         ",
-    "   __|     |__      ",
-    "  /   '---'   \\    ",
-    " | nya  meow   |    ",
-    " |   bongo cat |    ",
-    "  \\___________/    ",
-    "   |   | |   |      ",
-    "  _|   |_|   |_     ",
+    "        .       .        ",
+    "        |\\_---_/|        ",
+    "       /   o_o   \\       ",
+    "       |    U    |       ",
+    "      \\  ._I_.  /       ",
+    "        `-_____-'        ",
+    "                         ",
+    "     					   ",
+    "                         ",
 };
 
 /* active bongo pointer — set at startup */
